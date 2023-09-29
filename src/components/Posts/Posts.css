@@ -1,3 +1,8 @@
 .posts {
   flex: 9;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
 }
