@@ -8,3 +8,8 @@
   font-family: "Varela", sans-serif;
   font-family: "Varela Round", sans-serif; 
 */
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
