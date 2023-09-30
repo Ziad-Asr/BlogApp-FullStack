@@ -1,6 +1,6 @@
-import "./Loging.css";
+import "./Login.css";
 
-const Loging = () => {
+const Login = () => {
   return (
     <div className="login">
       <span className="loginTitle">Login</span>
@@ -24,4 +24,4 @@ const Loging = () => {
   );
 };
 
-export default Loging;
+export default Login;
