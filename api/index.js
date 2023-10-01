@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const authRoute = require('./routes/auth')
+const userRoute = require('./routes/users')
 
 dotenv.config();
 app.use(express.json()) // To enable sending json data on postman
@@ -13,6 +14,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use("/api/auth", authRoute); // to enable auth route
+app.use("/api/users", userRoute); 
 
 app.listen("3000", () => {
   console.log("Backend is running.");
