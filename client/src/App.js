@@ -9,7 +9,7 @@ import SinglePostPage from "./pages/SinglePost/SinglePostPage";
 import Write from "./pages/Write/Write";
 
 function App() {
-  const currentUser = false;
+  const currentUser = true;
 
   return (
     <>

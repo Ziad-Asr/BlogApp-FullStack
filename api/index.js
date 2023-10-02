@@ -16,6 +16,6 @@ mongoose
 app.use("/api/auth", authRoute); // to enable auth route
 app.use("/api/users", userRoute); 
 
-app.listen("3000", () => {
+app.listen("8000", () => {
   console.log("Backend is running.");
 });
