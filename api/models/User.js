@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema(
       default: "",
     },
   },
-  { timestamps: true }
+  { timestamps: true } //time of (create - get - delete - update)
 );
 
 module.exports = mongoose.model("User", userSchema);
