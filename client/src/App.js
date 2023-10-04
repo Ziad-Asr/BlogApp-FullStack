@@ -7,7 +7,6 @@ import Register from "./pages/Register/Register";
 import Settings from "./pages/Settings/Settings";
 import SinglePostPage from "./pages/SinglePost/SinglePostPage";
 import Write from "./pages/Write/Write";
-
 function App() {
   const currentUser = true;
 
