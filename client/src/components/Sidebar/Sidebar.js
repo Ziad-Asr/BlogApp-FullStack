@@ -1,8 +1,20 @@
+import {useEffect, useState} from 'react'
+import axios from 'axios'
 import aboutMeImage from "../../assets/pexels-vanngo-ng-18450885.jpg";
 
 import "./Sidebar.css";
 
 const Sidebar = () => {
+  const [category, setCategory] = useState([]);
+  
+  useEffect(() => {
+    const getCategories = async () => {
+      const res = await axios.get('http://localhost:8000/api/categories')
+      setCategory(res.data)
+    }
+    getCategories()
+  },[])
+
   return (
     <div className="sidebar">
       <div className="sidebar-item">
@@ -17,12 +29,9 @@ const Sidebar = () => {
       <div className="sidebar-item">
         <div className="sidebar-title">CATEGORIES</div>
         <ul className="sidebar-list">
-          <li className="sidebar-list-item">Life</li>
-          <li className="sidebar-list-item">Music</li>
-          <li className="sidebar-list-item">Style</li>
-          <li className="sidebar-list-item">Sport</li>
-          <li className="sidebar-list-item">Tech</li>
-          <li className="sidebar-list-item">Cinema</li>
+        {category.map(cate => (
+          <li className="sidebar-list-item">{cate.name}</li>
+        ))}
         </ul>
       </div>
 
